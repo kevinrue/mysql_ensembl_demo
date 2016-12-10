@@ -1,0 +1,5 @@
+SHOW DATABASES;
+CREATE DATABASE ensembl;
+USE ensembl;
+SELECT DATABASE() -- active database
+SHOW TABLES;
