@@ -35,3 +35,10 @@ write.table(
     table.gene2tx, "tables/table.gene2tx.txt", quote = FALSE, sep = "\t",
     na = "\n", row.names = FALSE, col.names = FALSE
 )
+
+table.symbol <- getBM(c("ensembl_gene_id","hgnc_symbol"), mart = bm.mart)
+names(table.symbol)
+write.table(
+    table.symbol, "tables/symbols.txt", quote = FALSE, sep = "\t", na = "\n",
+    row.names = FALSE, col.names = FALSE
+)
