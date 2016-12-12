@@ -17,16 +17,20 @@ CREATE TABLE genes (
 );
 LOAD DATA LOCAL INFILE '/Users/kevin/git/mysql_ensembl_demo/tables/genes.txt' INTO TABLE genes;
 -- DROP table ensembl.genes;
+
+-- Show all records (Workbench defaults to first 1000)
 SELECT 
     *
 FROM
     genes;
 
+-- Show count of genes
 SELECT 
     COUNT(*)
 FROM
     genes;
 
+-- Show count of genes per chromosome
 SELECT 
     chromosome_name, COUNT(*)
 FROM
@@ -44,16 +48,19 @@ CREATE TABLE transcripts (
 -- DROP table ensembl.transcripts;
 LOAD DATA LOCAL INFILE '/Users/kevin/git/mysql_ensembl_demo/tables/transcripts.txt' INTO TABLE transcripts;
 
+-- Show all records (Workbench defaults to first 1000)
 SELECT 
     *
 FROM
     transcripts;
 
+-- Show count of transcripts
 SELECT 
     COUNT(*)
 FROM
     transcripts;
 
+-- Show count of transcripts for each biotype
 SELECT 
     transcript_biotype, COUNT(*)
 FROM
@@ -72,16 +79,19 @@ create table gene2tx (
 -- DROP table ensembl.transcripts;
 LOAD DATA LOCAL INFILE '/Users/kevin/git/mysql_ensembl_demo/tables/table.gene2tx.txt' INTO TABLE gene2tx;
 
+-- Show all records (Workbench defaults to first 1000)
 SELECT 
     *
 FROM
     gene2tx;
 
+-- Show count of mapping records
 SELECT 
     COUNT(*)
 FROM
     gene2tx;
 
+-- Show count of transcripts per gene in decreasing order
 SELECT 
     ensembl_gene_id, COUNT(*)
 FROM

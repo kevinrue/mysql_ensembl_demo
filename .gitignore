@@ -1,6 +1,9 @@
 # Data folders
 tables
 
+# R
+.Rhistory
+
 # RStudio
 *.Rproj
 
