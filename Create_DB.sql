@@ -136,5 +136,5 @@ FROM
     gene2tx
 GROUP BY ensembl_gene_id
 ORDER BY COUNT(*) DESC
-)
-left join gene2symbol;
+) AS s
+left join gene2symbol g2s on g2s.ensembl_gene_id = s.ensembl_gene_id;
